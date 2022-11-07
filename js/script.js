@@ -1,19 +1,15 @@
-// MILESTONE 0:
-// Creare l’array di oggetti con le informazioni fornite.
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+// MILESTONE 0: v
+// Creare l’array di oggetti con le informazioni fornite. v
+// MILESTONE 1: v
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto v
 // MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
+// Stampare le stesse informazioni su DOM sottoforma di stringhe v
 // BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva
+// Trasformare la stringa foto in una immagine effettiva v
 // BONUS 2:
-// Organizzare i singoli membri in card/schede
-// Consigli del giorno:
-// Ragioniamo come sempre a step.
-// Prima la logica in italiano e poi traduciamo in codice.
-// E ricordiamoci che console.log() è nostro amico!
-// Buon lavoro!
-// Questi sono i dati delle persone:
+// Organizzare i singoli membri in card/schede v
+
+//dati:
 // Wayne Barnett	Founder & CEO	wayne-barnett-founder-ceo.jpg
 // Angela Caroll	Chief Editor	angela-caroll-chief-editor.jpg
 // Walter Gordon	Office Manager	walter-gordon-office-manager.jpg
@@ -58,3 +54,22 @@ const team = [
         pic: 'barbara-ramos-graphic-designer.jpg',
     }
 ]
+console.table(team)
+let cards = document.getElementById('cards')
+
+for (let i = 0; i < team.length; i++) {
+    cards.innerHTML += `
+    <div class="m-3" style="width: 20rem;">
+    <img class="card-img-top" src="img/${team[i].pic}" alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title">${team[i].name}</h5>
+    <p class="card-text">${team[i].role}</p>
+    </div>
+    </div>`
+}
+
+
+
+
+
+
